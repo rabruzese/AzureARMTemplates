@@ -1,4 +1,3 @@
-# Template for creating a new VM in Azure
 {
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
@@ -9,46 +8,44 @@
         "description": "Username for the Virtual Machine."
       }
     },
-    "adminPassword": {
-      "reference": {
-        "keyvault": {
-          "id": "/subscriptions/1758c3fb-e3ea-4c07-946a-dfaff911dbe9/resourceGroups/TestResource01/Providers/Microsoft.KeyVault/vaults/ac-dev-keyvault01"
+        "adminPassword": {
+          "type": "string",
+          "metadata": {
+            "description": "Password for the Virtual Machine."
+          }
         },
-        "secretName": "localAdminPW"
-      }
-    },
-    "dnsLabelPrefix": {
-      "type": "string",
-      "metadata": {
-        "description": "Unique DNS Name for the Public IP used to access the Virtual Machine."
-      }
-    },
-    "windowsOSVersion": {
-      "type": "string",
-      "defaultValue": "2016-Datacenter",
-      "allowedValues": [
-        "2008-R2-SP1",
-        "2012-Datacenter",
-        "2012-R2-Datacenter",
-        "2016-Nano-Server",
-        "2016-Datacenter-with-Containers",
-        "2016-Datacenter"
-      ],
-      "metadata": {
-        "description": "The Windows version for the VM. This will pick a fully patched image of this given Windows version."
-      }
-    }
-  },
+        "dnsLabelPrefix": {
+          "type": "string",
+          "metadata": {
+            "description": "Unique DNS Name for the Public IP used to access the Virtual Machine."
+          }
+        },
+        "windowsOSVersion": {
+          "type": "string",
+          "defaultValue": "2016-Datacenter",
+          "allowedValues": [
+            "2008-R2-SP1",
+            "2012-Datacenter",
+            "2012-R2-Datacenter",
+            "2016-Nano-Server",
+            "2016-Datacenter-with-Containers",
+            "2016-Datacenter"
+          ],
+          "metadata": {
+            "description": "The Windows version for the VM. This will pick a fully patched image of this given Windows version."
+          }
+        }
+      },
   "variables": {
     "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'sawinvm')]",
-    "osDiskName": "ap08os.vhd",
-    "dataDisk1VhdName": "ap08data1.vhd",
-    "nicName": "VMNic1",
+    "osDiskName": "ap09os.vhd",
+    "dataDisk1VhdName": "ap09data1.vhd",
+    "nicName": "ap09VMNic1",
     "addressPrefix": "172.16.64.0/24",
     "subnetName": "Network1",
     "subnetPrefix": "172.16.64.0/24",
-    "publicIPAddressName": "dev-ap08v-pip1",
-    "vmName": "dev-eus2-ap07v",
+    "publicIPAddressName": "dev-ap09v-pip1",
+    "vmName": "dev-eus2-ap09v",
     "virtualNetworkName": "dev-eus2-vnet01",
     "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]"
   },
