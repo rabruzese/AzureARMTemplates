@@ -27,7 +27,7 @@
             "value": "acdev-eus2-dc2v"
         },
         "adminPassword": {
-        "value": null
+        "value": "P@ssw0rd1234"
         },
         "dnslabel": {
           "value": "acdev-ap09v"
