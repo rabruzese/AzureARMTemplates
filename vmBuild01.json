@@ -45,7 +45,7 @@
     "subnetName": "Network1",
     "subnetPrefix": "172.16.64.0/24",
     "publicIPAddressName": "dev-ap09v-pip1",
-    "vmName": "dev-eus2-ap09v",
+    "vmName": "acdev-ap09v",
     "virtualNetworkName": "dev-eus2-vnet01",
     "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]"
   },
