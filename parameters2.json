@@ -8,7 +8,7 @@
         "adminPassword": {
         "value": "P@ssw0rd1234"
         },
-        "dnslabel": {
+        "dnsLabelPrefix": {
           "value": "acdev-ap09v"
         }
     }
