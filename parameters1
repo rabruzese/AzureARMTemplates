@@ -1,0 +1,51 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus2"
+        },
+        "virtualMachineName": {
+          "value": "acdev-ap09v"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_D1_v2"
+        },
+        "adminUsername": {
+            "value": "acadmin"
+        },
+        "storageAccountName": {
+            "value": "acdeveus2stor01"
+        },
+        "virtualNetworkName": {
+            "value": "ACDEV-EUS2-VNET01"
+        },
+        "networkInterfaceName": {
+          "value": "acdev-ap09v-nic1"
+        },
+        "networkSecurityGroupName": {
+            "value": "acdev-eus2-dc2v"
+        },
+        "adminPassword": {
+        "value": null
+        },
+        "dnslabel": {
+          "value": "acdev-ap09v"
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "acdeveus2stor01"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "/subscriptions/1758c3fb-e3ea-4c07-946a-dfaff911dbe9/resourceGroups/acdev-eus2-rg01/providers/Microsoft.Storage/storageAccounts/acdeveus2stor01"
+        },
+        "subnetName": {
+            "value": "Network1"
+        },
+        "publicIpAddressName": {
+          "value": "acdev-ap09v-pip1"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        }
+    }
+}
